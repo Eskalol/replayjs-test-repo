@@ -1,0 +1,47 @@
+@import '../node_modules/domreplayhud/dist/styles.css';
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/mdbootstrap/css/mdb.min.css';
+
+body {
+  background: url(https://i.imgur.com/Zoj4DgE.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  // background: url(data:image/png;base64,iVBORw11KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAGXRF…nVmGATQvBSSqqWxvMI4BK7xaZ4FSzwh24yv3J2gZw9AgwAGZEj/RsjMkMAAAAASUVORK5CYII=);
+}
+
+
+.nav-tabs {
+  border: 0;
+  padding: .7rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: -20px;
+  background-color: #2bbbad;
+  z-index: 2;
+  position: relative;
+  border-radius: 2px;
+
+  .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: initial;
+    transition-delay: initial;
+    border: 0;
+    color: #fff;
+
+    &.active {
+      background-color: rgba(255,255,255,.2);
+      color: #fff;
+      -webkit-transition: all 1s;
+      transition: all 1s;
+      border-radius: 2px;
+    }
+  }
+}
