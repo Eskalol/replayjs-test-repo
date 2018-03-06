@@ -2,8 +2,8 @@ import 'babel-polyfill';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, browserHistory} from 'react-router';
-import DomReplay, {Hud} from 'domreplayhud';
+import { Router, Route, browserHistory } from 'react-router';
+import DomReplay, { Hud } from 'domreplayhud';
 import { CookiesProvider } from 'react-cookie';
 
 import MainPage from './app/pages/main';
@@ -30,6 +30,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// const domreplay = new DomReplay({debugmode: true});
-// const hud = new Hud(domreplay);
-// hud.render();
+const domreplay = new DomReplay({debugmode: true});
+const hud = new Hud(domreplay);
+hud.render();
