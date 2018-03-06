@@ -9,6 +9,7 @@ import {Main} from './app/main';
 import LoginPage from './app/pages/login';
 import SignUpPage from './app/pages/signup';
 import AdminPage from './app/pages/admin';
+import SettingsPage from './app/pages/settings';
 import Base from './app/components/base';
 
 import './index.scss';
@@ -20,6 +21,7 @@ ReactDOM.render(
     <Route path="/login" component={LoginPage}/>
     <Route path="/signup" component={SignUpPage}/>
     <Route path="/admin" component={AdminPage}/>
+    <Route path="/settings" component={SettingsPage}/>
   </Route>
   </Router>,
   document.getElementById('root')

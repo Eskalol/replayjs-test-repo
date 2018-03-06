@@ -57,8 +57,8 @@ export default class AvisNavbar extends Component {
                   <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                     <DropdownToggle nav caret>Profile</DropdownToggle>
                     <DropdownMenu>
-                      <DropdownItem href="#">Settings</DropdownItem>
-                      <DropdownItem href="#">Admin</DropdownItem>
+                      <DropdownItem href="/settings">Settings</DropdownItem>
+                      <DropdownItem href="/admin">Admin</DropdownItem>
                       <DropdownItem href="#">Logout</DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
