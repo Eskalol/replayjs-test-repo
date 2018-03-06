@@ -26,8 +26,8 @@ export default class SettingsPage extends Component {
     super(props);
     const { hash } = window.location;
     this.state = {
-      userInfoActive: hash === '#users' || hash !== '#invites',
-      changePasswordActive: hash === '#invites',
+      userInfoActive: hash === '#userInfo' || hash !== '#changePassword',
+      changePasswordActive: hash === '#changePassword',
       user: {
         name: 'Awesome',
         email: 'awesome@example.com',
@@ -63,13 +63,13 @@ export default class SettingsPage extends Component {
           <ul className="nav nav-tabs nav-justified unique-color-dark">
             <li className="nav-item">
                 <a  className={`nav-link ${this.state.userInfoActive ? 'active' : ''}`}
-                    data-toggle="tab" href="#users" role="tab" onClick={this.handleUserInfoClick}>
+                    data-toggle="tab" href="#userInfo" role="tab" onClick={this.handleUserInfoClick}>
                   <i className="fa fa-user mr-2"/>{this.state.user.name}
                 </a>
             </li>
             <li className="nav-item">
                 <a  className={`nav-link ${this.state.changePasswordActive ? 'active' : ''}`}
-                    data-toggle="tab" href="#invites" role="tab" onClick={this.handleChangePasswordClick}>
+                    data-toggle="tab" href="#changePassword" role="tab" onClick={this.handleChangePasswordClick}>
                   <i className="fa fa-edit mr-2"/> Change password
                 </a>
             </li>
