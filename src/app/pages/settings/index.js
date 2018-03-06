@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
-import NavBar from '../../components/navbar';
+import { Breadcrumb, BreadcrumbItem } from 'mdbreact';
 
+import NavBar from '../../components/navbar';
 import UserInfo from './info';
 import ChangePassword from './changePassword';
+
+
+class BreadCrumb extends Component {
+  render() {
+    return (
+      <div className="mr-auto ml-auto">
+        <Breadcrumb>
+          <BreadcrumbItem><a href="/" className="white-text">Home</a></BreadcrumbItem>
+          <BreadcrumbItem active>Profile settings</BreadcrumbItem>
+        </Breadcrumb>
+      </div>
+    );
+  }
+}
+
 
 export default class SettingsPage extends Component {
 
@@ -40,7 +56,9 @@ export default class SettingsPage extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBar>
+          <BreadCrumb />
+        </NavBar>
         <div className="m-3">
           <ul className="nav nav-tabs nav-justified unique-color-dark">
             <li className="nav-item">

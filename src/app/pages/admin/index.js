@@ -1,8 +1,23 @@
 import React, { Component } from 'react';
-import NavBar from '../../components/navbar';
+import { Breadcrumb, BreadcrumbItem } from 'mdbreact';
 
+import NavBar from '../../components/navbar';
 import Users from './users';
 import Invites from './invites';
+
+
+class BreadCrumb extends Component {
+  render() {
+    return (
+      <div className="mr-auto ml-auto">
+        <Breadcrumb>
+          <BreadcrumbItem><a href="/" className="white-text">Home</a></BreadcrumbItem>
+          <BreadcrumbItem active>Admin</BreadcrumbItem>
+        </Breadcrumb>
+      </div>
+    );
+  }
+}
 
 
 export default class AdminPage extends Component {
@@ -36,7 +51,9 @@ export default class AdminPage extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBar>
+          <BreadCrumb />
+        </NavBar>
         <div className="m-3">
           <ul className="nav nav-tabs nav-justified unique-color-dark">
             <li className="nav-item">
