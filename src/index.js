@@ -4,8 +4,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, browserHistory} from 'react-router';
 import DomReplay, {Hud} from 'domreplayhud';
+import { CookiesProvider } from 'react-cookie';
 
-import {Main} from './app/main';
+import MainPage from './app/pages/main';
 import LoginPage from './app/pages/login';
 import SignUpPage from './app/pages/signup';
 import AdminPage from './app/pages/admin';
@@ -15,15 +16,17 @@ import Base from './app/components/base';
 import './index.scss';
 
 ReactDOM.render(
-  <Router history={browserHistory}>
-  <Route component={Base}>
-    <Route path="/" component={Main}/>
-    <Route path="/login" component={LoginPage}/>
-    <Route path="/signup" component={SignUpPage}/>
-    <Route path="/admin" component={AdminPage}/>
-    <Route path="/settings" component={SettingsPage}/>
-  </Route>
-  </Router>,
+  <CookiesProvider>
+    <Router history={browserHistory}>
+      <Route component={Base}>
+        <Route path="/" component={MainPage}/>
+        <Route path="/login" component={LoginPage}/>
+        <Route path="/signup" component={SignUpPage}/>
+        <Route path="/admin" component={AdminPage}/>
+        <Route path="/settings" component={SettingsPage}/>
+      </Route>
+    </Router>
+  </CookiesProvider>,
   document.getElementById('root')
 );
 

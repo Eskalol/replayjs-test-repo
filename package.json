@@ -9,8 +9,10 @@
     "moment": "^2.21.0",
     "moment-timezone": "^0.5.14",
     "react": "^15.4.2",
+    "react-cookie": "^2.1.4",
     "react-dom": "^15.4.2",
     "react-moment": "^0.7.0",
+    "react-pdf": "^2.5.3",
     "react-router": "^3.0.2"
   },
   "devDependencies": {

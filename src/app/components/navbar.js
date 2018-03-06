@@ -45,13 +45,7 @@ export default class AvisNavbar extends Component {
             </NavbarBrand>
             { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
             <Collapse isOpen = { this.state.collapse } navbar>
-              <NavbarNav className="mr-auto pl-lg-4 pl-md-4 pl-sm-2 pl-xl-4">
-                <div className="form-inline">
-                  <div className="md-form mt-0">
-                    <input className="form-control" type="text" placeholder="Search" aria-label="Search"/>
-                  </div>
-                </div>
-              </NavbarNav>
+              {this.props.children}
               <NavbarNav className="ml-auto">
                 <NavItem>
                   <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
