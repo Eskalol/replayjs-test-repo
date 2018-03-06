@@ -15,10 +15,14 @@ export default class LoginPage extends Component {
         <div className="row justify-content-center">
           <div className="col-xl-3 col-lg-4 col-sm-12 col-md-10">
             <div className="card">
-              <div className="container">
+              <div className="card-body">
+                <div className="form-header default-color">
+                  <h3>
+                    <i className="fa fa-lock mr-2" />
+                    Login:
+                  </h3>
+                </div>
                 <form>
-                  <p/>
-                  <p className="h5 text-center mb-4">Sign in</p>
                   <Input label="Type your email" icon="envelope" group type="email" validate error="wrong" success="right"/>
                   <Input label="Type your password" icon="lock" group type="password" validate/>
                   <div className="text-center">
