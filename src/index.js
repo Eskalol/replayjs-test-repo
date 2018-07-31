@@ -11,7 +11,6 @@ import LoginPage from './app/pages/login';
 import SignUpPage from './app/pages/signup';
 import AdminPage from './app/pages/admin';
 import SettingsPage from './app/pages/settings';
-import RequestPage from './app/pages/request';
 import Base from './app/components/base';
 
 import './index.scss';
@@ -25,7 +24,6 @@ ReactDOM.render(
         <Route path="/signup" component={SignUpPage}/>
         <Route path="/admin" component={AdminPage}/>
         <Route path="/settings" component={SettingsPage}/>
-        <Route path="/request" component={RequestPage}/>
       </Route>
     </Router>
   </CookiesProvider>,
