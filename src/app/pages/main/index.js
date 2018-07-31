@@ -38,6 +38,9 @@ class NavBarItems extends Component {
             </div>
           </div>
         </NavItem>
+        <NavItem>
+          <a className="nav-link" href="/request">Request</a>
+        </NavItem>
       </NavbarNav>
     );
   }
