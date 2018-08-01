@@ -2,7 +2,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "bootstrap": "4.0.0-beta.2",
-    "domreplayhud": "file:../DOMReplayHudv2",
+    "domreplay": "git+https://github.com/Eskalol/DOMReplay.git#dist",
     "lodash": "^4.17.5",
     "mdbootstrap": "^4.4.3",
     "mdbreact": "^4.1.0",

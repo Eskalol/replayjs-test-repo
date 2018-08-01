@@ -3,7 +3,7 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
-import DomReplay, { Hud } from 'domreplayhud';
+import DomReplay, { Hud, events, Registry, dispatcher } from 'domreplay';
 import { CookiesProvider } from 'react-cookie';
 
 import MainPage from './app/pages/main';
@@ -30,6 +30,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-const domreplay = new DomReplay({debugmode: true});
-const hud = new Hud(domreplay);
+Registry.registerEvent(new events.ClickEvent());
+Registry.registerEvent(new events.InputEvent());
+const domreplay = new DomReplay({debugmode: true, apiUrl: 'https://nameless-river-12581.herokuapp.com/api/blob'});
+domreplay.initialize();
+const hud = new Hud(domreplay, {showRecordIndicator: true, showReplayIndicator: true});
 hud.render();
