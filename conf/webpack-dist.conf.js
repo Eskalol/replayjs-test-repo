@@ -36,7 +36,12 @@ module.exports = {
         loaders: [
           'babel-loader'
         ]
-      }
+      },
+      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader'},
+      { test: /\.(woff|woff2)$/, loader: 'url-loader?prefix=font/&limit=5000' },
+      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/octet-stream' },
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=image/svg+xml' },
+      { test: /\.png(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=image/png' }
     ]
   },
   plugins: [
@@ -49,10 +54,10 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      output: {comments: false},
-      compress: {unused: true, dead_code: true, warnings: false} // eslint-disable-line camelcase
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   output: {comments: false},
+    //   compress: {unused: true, dead_code: true, warnings: false} // eslint-disable-line camelcase
+    // }),
     new ExtractTextPlugin('index-[contenthash].css'),
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor'}),
     new webpack.LoaderOptionsPlugin({
